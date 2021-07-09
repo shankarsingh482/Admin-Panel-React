@@ -78,7 +78,66 @@ export const delete_testimonials_api = (data) => {
 };
 
 
+export function show_coach() {
+    return axios
+        .get(
+            process.env.REACT_APP_API_URL_ADMIN+"show_coach_dropdown",
+            {
+                headers: {
+                    Authorization: localStorage.getItem("token"),
+                },
+            }
+        )
+        .then((response) => {
+            return response.data;
+        })
+        .catch((err) => {
+            return err;
+        });
+  };
 
 
+export function show_user() {
+    return axios
+        .get(
+            process.env.REACT_APP_API_URL_ADMIN+"show_users",
+            {
+                headers: {
+                    Authorization: localStorage.getItem("token"),
+                },
+            }
+        )
+        .then((response) => {
+            return response.data;
+        })
+        .catch((err) => {
+            return err;
+        });
+  };
+
+
+  export const sendTestimonials = (data) => {
+    return axios
+        .post(
+            process.env.REACT_APP_ADD_TESTIMONIALS,
+            {
+                coach_id: data.coach_id,
+                user_id: data.user_id,
+                testimonials:data.testimonials,
+                rating:data.rating
+            },
+            {
+                headers: {
+                    Authorization: localStorage.getItem("token"),
+                },
+            }
+        )
+        .then((response) => {
+            return response;
+        })
+        .catch((err) => {
+            return err;
+        });
+};
 
 

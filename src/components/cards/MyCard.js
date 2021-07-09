@@ -146,7 +146,7 @@ const MyCard = (props) => {
 
 
                 <Grid item lg={3} xs={12} md={4} sm={6}>
-                    <Link to='/testimonials' className={classes.link}>
+                    <Link to='/testimonials_management' className={classes.link}>
                         <Paper className={classes.paper} elevation={5}>
                             <Grid container>
                                 <Grid item xs={12} sm={5} align='center'>

@@ -12,7 +12,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import TextareaAutosize from 'react-autosize-textarea';
 import FileBase64 from 'react-file-base64';
-  
+
 
 import { show_coach, show_coach_details, update_coach } from './Coach_management_api'
 
@@ -108,7 +108,7 @@ export default function AddCoach(props) {
     var phoneno = /^[0-9]{3,14}$/;
     // function for handle changes
 
-    //  function for handle changes for select Coach 
+    //  function for handle changes for select Coach
 
     function handleChangeForSelectCoach(e) {
         setSelectedCoach(e.target.value);
@@ -178,7 +178,7 @@ export default function AddCoach(props) {
         else{
             setCorrectFIRST_NAME(false)
         }
-        
+
     }
 
     // function for handle changes for Last Name
@@ -432,7 +432,7 @@ export default function AddCoach(props) {
         var allGood= true
         //console.log(correctCOACH_IMAGE)
         if(correctFIRST_NAME && correctLAST_NAME && correctUSER_NAME && correctEMAIL && correctPHONE && correctFAT
-             && correctHEIGHT && correctWEIGHT && correctCOACH_NAME && correctAVAILABLE_SLOT && correctNO_OF_PERSON_COACH 
+             && correctHEIGHT && correctWEIGHT && correctCOACH_NAME && correctAVAILABLE_SLOT && correctNO_OF_PERSON_COACH
              && correctABOUT_ME && correctDESCRIPTION && correctCOACH_IMAGE && correctSPECIALITY && correctCOACH_TYPE && correctFITNESS_LEVEL){
                  allGood=true
              }
@@ -648,7 +648,7 @@ export default function AddCoach(props) {
                         validators={['required']}
                         errorMessages={['this field is required']}
                         onChange={handleChangeOfFirstName}
-                        InputLabelProps={{ shrink: true }} 
+                        InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
 
@@ -665,7 +665,7 @@ export default function AddCoach(props) {
                         placeholder=""
                         value={MID_NAME}
                         onChange={handleChangeOfMidName}
-                        InputLabelProps={{ shrink: true }} 
+                        InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
 
@@ -699,7 +699,7 @@ export default function AddCoach(props) {
                         required
                         fullWidth
                         id="user_name_id"
-                        label="User Name"                        
+                        label="User Name"
                         style={(!correctUSER_NAME) ? {border: "2px solid red"}:{}}
                         placeholder=""
                         value={USER_NAME}
@@ -995,7 +995,7 @@ export default function AddCoach(props) {
                         errorMessages={['this field is required']}
                         value={FACEBOOK_LINK}
                         onChange={handleChangeOfFacebookLink}
-                        InputLabelProps={{ shrink: true }} 
+                        InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
 
@@ -1012,7 +1012,7 @@ export default function AddCoach(props) {
                         errorMessages={['this field is required']}
                         value={TWITTER_LINK}
                         onChange={handleChangeOfTwitterLink}
-                        InputLabelProps={{ shrink: true }} 
+                        InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
 
@@ -1030,7 +1030,7 @@ export default function AddCoach(props) {
                         errorMessages={['this field is required']}
                         value={INSTAGRAM_LINK}
                         onChange={handleChangeOfInstagramLink}
-                        InputLabelProps={{ shrink: true }} 
+                        InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
 

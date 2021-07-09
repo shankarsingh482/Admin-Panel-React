@@ -52,7 +52,8 @@ import ShowCloseMessage from '../User Management/Support/Show_close_message'
 import WorkoutManagement from '../User Management/Workout/Workout_management'
 import CreateWorkout from '../User Management/Workout/Create_workout'
 import CouponManagement from '../User Management/Coupon Management/Coupon_management'
-
+import TestimonialsManagement from '../User Management/Testimonials/Testimonials_main'
+import AddTestimonials from '../User Management/Testimonials/AddTestimonials'
 import Create_coupon from "../User Management/Coupon Management/Create_coupon";
 import Show_coupon from "../User Management/Coupon Management/Show_coupon";
 import AdditionalFunctionalities from '../User Management/Additional Functionalities/Additional_functionalities';
@@ -341,13 +342,13 @@ export default function Navbar(props) {
 
                     <ListItem button>
                         <ListItemIcon style={{ color: "#f2f7f4" }}>
-                        <Link to='/testimonials' className={classes.link}>
+                        <Link to='/testimonials_management' className={classes.link}>
                         <Tooltip title="Testimonials">
                             <RateReview />
                         </Tooltip>
                         </Link>
                         </ListItemIcon>
-                        <Link to='/testimonials' className={classes.link}>
+                        <Link to='/testimonials_management' className={classes.link}>
                             <ListItemText primary={"Testimonials"} />
                         </Link>
                     </ListItem>
@@ -437,6 +438,8 @@ export default function Navbar(props) {
                     <Route exact path='/workout_management' component={WorkoutManagement}/>
                     <Route exact path='/create_workout' component={CreateWorkout}/>
                     <Route exact path='/coupon_management' component={CouponManagement}/>
+                    <Route exact path='/testimonials_management' component={TestimonialsManagement}/>
+                    <Route exact path='/addTestimonials' component={AddTestimonials}/>
                     <Route exact path ="/payments" component ={Payments}/>
                     <Route exact path='/all_payments' component={AllPayments}/>
                     <Route exact path="/coach_Payments" component ={Coachpayments} />
@@ -444,6 +447,7 @@ export default function Navbar(props) {
                     <Route exact path='/show_coupon' component={Show_coupon}/>
                     <Route exact path='/additional_functionalities' component={AdditionalFunctionalities}/>
                     <Route exact path='/pop_up_window' component={Pop_up}/>
+
                     <Route exact path='/notifications' component={Notification}/>
 
                 </Switch>
